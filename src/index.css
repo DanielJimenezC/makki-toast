@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Shantell Sans', cursive;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  font-family: 'Shantell Sans', cursive;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --neutral-color: rgb(30,27,26);
+    --neutral-color-80: #302926;
+    --neutral-color-60: #806559;
+    --neutral-color-20: #483E3A;
+    --text-color: #E8E8E8;
+    --primary-color: #77c5c2;
+    --secondary-color: #f6898d;
+    --secondary-color-70: #467776;
+    --code-color: #2D2827;
+    --bnt-color: #2D2827;
+  }
+}
+
+body {
+  --neutral-color: #FAE3D9;
+  --neutral-color-80: #F3D1C2;
+  --neutral-color-60: #D6A995;
+  --neutral-color-20: #FFE8DD;
+  --text-color: #1E1E1E;
+  --primary-color: #55B7B6;
+  --secondary-color: #F36268;
+  --secondary-color-70: #3A8C8B;
+  --code-color: #37312F;
+  --bnt-color: #FAE3D9;
+
+  background: var(--neutral-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body.dark {
+  --neutral-color: rgb(30,27,26);
+  --neutral-color-80: #302926;
+  --neutral-color-60: #806559;
+  --neutral-color-20: #483E3A;
+  --text-color: #E8E8E8;
+  --primary-color: #77c5c2;
+  --secondary-color: #f6898d;
+  --secondary-color-70: #467776;
+  --code-color: #2D2827;
+  --bnt-color: #2D2827;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
