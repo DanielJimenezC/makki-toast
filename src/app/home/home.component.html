@@ -1,0 +1,40 @@
+@if(outlet.isActivated == false) { 
+  <div class="page">
+    <header></header>
+    <main>
+      <div class='content'>
+        <div class='title-container'>
+          <p class='title first'>MAKKI</p>
+          <p class='title second'>TOAST</p>
+        </div>
+        <p class='subtitle'>Creative toast</p>
+        <div class='button-container'>
+          <a class='button' routerLink="/docs">
+            <i class="bx bx-file-detail"></i>
+            <p class='button-text'>Documentation</p>
+          </a>
+          <a class='button' target='_blank' href='https://github.com/DanielJimenezC/makki-toast-package'>
+            <i class="bxl bx-github"></i>
+            <p class='button-text'>Github</p>
+          </a>
+        </div>
+        <p class='version'>- v2.0.9 -</p>
+        <button class='button-show' (click)="handleToast()">Show Simple Toast</button>
+        <ul class='properties'>
+          <li class='item'><i class="bx bx-bookmark"></i>Easy to use</li>
+          <li class='item'><i class="bx bx-bookmark"></i>Customizable</li>
+          <li class='item'><i class="bx bx-bookmark"></i>Supports Promise</li>
+        </ul>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class='footer-links'>
+        <a target='_blank' href='https://github.com/DanielJimenezC/makki-toast-package'>Github</a>
+        <a routerLink="/docs">Docs</a>
+      </div>
+      <p style="padding-bottom: 0px;">The MIT License 2023 makki-toast</p>
+      <p>Built by <a target='_blank' href='https://github.com/DanielJimenezC'>Daniel Jimenez</a></p>
+    </footer>
+  </div>
+}
+<router-outlet #outlet="outlet"></router-outlet>

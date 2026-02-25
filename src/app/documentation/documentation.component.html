@@ -1,0 +1,277 @@
+<div class="container">
+  <header class='navbar-container'>
+    <div class='navbar-title'>
+      <a routerLink="/">
+        <p class='first'>Makki</p><p class='second'>Toast</p>
+      </a>
+    </div>
+    <p class='navbar-version'>v2.0.9</p>
+  </header>
+  <div>
+    <p class='description'>Designed and developed to facilitate the build and management 
+      of custom alerts in Angular applications, it offers easy integration with projects and 
+      compatibility with compatibility with promise to enhance the user experience.
+    </p>
+    <div class='container-btn-docs'>
+      <a class='btn-docs' target='_blank' href='https://github.com/DanielJimenezC/makki-toast-package'>
+        <i class="bxl bx-github"></i>
+        Github
+      </a>
+      <a class='btn-docs' target='_blank' href='https://www.npmjs.com/package/makki-toast'>
+        <i class="bxl bx-npm"></i>
+        @makki-toast
+      </a>
+    </div>
+  </div>
+  <ul class='tab-list'>
+    <li (click)="setIsActive(false)" class="tab-item" [ngClass]="{ 'active-tab': !isActive }">Usage</li>
+    <li (click)="setIsActive(true)" class="tab-item" [ngClass]="{ 'active-tab': isActive }">Configuration</li>
+  </ul>
+  @if (!isActive) {
+    <div class='tab usage'>
+      <p class='doc-title'>Installation</p>
+      <div class="code-container">
+        <div class="copy-clipboard" (click)="handleCopyClipboard(installationCode)">
+          <i class="bx bx-copy"></i>
+        </div>
+        <pre><code [highlightAuto]="installationCode" lineNumbers></code></pre>
+      </div>
+      <p class='doc-title'>Getting Started</p>
+      <p class='subtitle-text'>Import Makki Toast in app.ts</p>
+      <div class="code-container">
+        <div class="copy-clipboard" (click)="handleCopyClipboard(importAppTsCode)">
+          <i class="bx bx-copy"></i>
+        </div>
+        <pre><code [highlightAuto]="importAppTsCode" lineNumbers></code></pre>
+      </div>
+      <p class='subtitle-text'>Import Makki Toast in app.html</p>
+      <div class="code-container">
+        <div class="copy-clipboard" (click)="handleCopyClipboard(importAppHtmlCode)">
+          <i class="bx bx-copy"></i>
+        </div>
+        <pre><code [highlightAuto]="importAppHtmlCode" lineNumbers></code></pre>
+      </div>
+      <p class='subtitle-text'>Import Makki Toast in your Component</p>
+      <div class="code-container">
+        <div class="copy-clipboard" (click)="handleCopyClipboard(importComponentServiceCode)">
+          <i class="bx bx-copy"></i>
+        </div>
+        <pre><code [highlightAuto]="importComponentServiceCode" lineNumbers></code></pre>
+      </div>
+    </div>
+    <p class='doc-title'>Simple Usage</p>
+    <p class='subtitle-text'>Info Message</p>
+    <div class='container-btn-docs'>
+      <button class='button-show-doc' (click)="handleInfoToast()">Show Toast</button>
+    </div>
+    <div class="code-container">
+      <div class="copy-clipboard" (click)="handleCopyClipboard(infoToastCode)">
+        <i class="bx bx-copy"></i>
+      </div>
+      <pre><code [highlightAuto]="infoToastCode" lineNumbers></code></pre>
+    </div>
+    <p class='subtitle-text'>Success Message</p>
+    <div class='container-btn-docs'>
+      <button class='button-show-doc' (click)="handleSuccessToast()">Show Toast</button>
+    </div>
+    <div class="code-container">
+      <div class="copy-clipboard" (click)="handleCopyClipboard(successToastCode)">
+        <i class="bx bx-copy"></i>
+      </div>
+      <pre><code [highlightAuto]="successToastCode" lineNumbers></code></pre>
+    </div>
+    <p class='subtitle-text'>Warning Message</p>
+    <div class='container-btn-docs'>
+      <button class='button-show-doc' (click)="handleWarningToast()">Show Toast</button>
+    </div>
+    <div class="code-container">
+      <div class="copy-clipboard" (click)="handleCopyClipboard(warningToastCode)">
+        <i class="bx bx-copy"></i>
+      </div>
+      <pre><code [highlightAuto]="warningToastCode" lineNumbers></code></pre>
+    </div>
+    <p class='subtitle-text'>Error Message</p>
+    <div class='container-btn-docs'>
+      <button class='button-show-doc' (click)="handleErrorToast()">Show Toast</button>
+    </div>
+    <div class="code-container">
+      <div class="copy-clipboard" (click)="handleCopyClipboard(errorToastCode)">
+        <i class="bx bx-copy"></i>
+      </div>
+      <pre><code [highlightAuto]="errorToastCode" lineNumbers></code></pre>
+    </div>
+    <p class='subtitle-text'>Action Message</p>
+    <div class='container-btn-docs'>
+      <button class='button-show-doc' (click)="handleActionToast()">Show Toast</button>
+    </div>
+    <div class="code-container">
+      <div class="copy-clipboard" (click)="handleCopyClipboard(actionToastCode)">
+        <i class="bx bx-copy"></i>
+      </div>
+      <pre><code [highlightAuto]="actionToastCode" lineNumbers></code></pre>
+    </div>
+    <p class='doc-title'>Promise Usage</p>
+    <p class='subtitle-text'>Promise Simple Message</p>
+    <div class='container-btn-docs'>
+      <button class='button-show-doc' (click)="handlePromiseSimpleToast()">Show Toast</button>
+    </div>
+    <div class="code-container">
+      <div class="copy-clipboard" (click)="handleCopyClipboard(promiseSimpleCode)">
+        <i class="bx bx-copy"></i>
+      </div>
+      <pre><code [highlightAuto]="promiseSimpleCode" lineNumbers></code></pre>
+    </div>
+    <p class='subtitle-text'>Promise With Component [Only show message]</p>
+    <div class='container-btn-docs'>
+      <button class='button-show-doc' (click)="handlePromiseComponentNoDataToast()">Show Toast</button>
+    </div>
+    <div class="code-container">
+      <div class="copy-clipboard" (click)="handleCopyClipboard(promiseComponentNoData)">
+        <i class="bx bx-copy"></i>
+      </div>
+      <pre><code [highlightAuto]="promiseComponentNoData" lineNumbers></code></pre>
+    </div>
+    <p class='subtitle-text'>Promise With Component [With data from response]</p>
+    <div class='container-btn-docs'>
+      <button class='button-show-doc' (click)="handlePromiseComponentDataToast()">Show Toast</button>
+    </div>
+    <div class="code-container">
+      <div class="copy-clipboard" (click)="handleCopyClipboard(promiseComponentWithData)">
+        <i class="bx bx-copy"></i>
+      </div>
+      <pre><code [highlightAuto]="promiseComponentWithData" lineNumbers></code></pre>
+    </div>
+    <p class='subtitle-text'>Data reception in the component</p>
+    <div class="code-container">
+      <div class="copy-clipboard" (click)="handleCopyClipboard(dataReception)">
+        <i class="bx bx-copy"></i>
+      </div>
+      <pre><code [highlightAuto]="dataReception" lineNumbers></code></pre>
+    </div>
+    <p class='doc-title'>Position</p>
+    <p class='subtitle-text'>The position attribute let you show top, bottom, left, right and center position</p>
+    <div class='container-btn-docs'>
+      <button class='button-show-doc' (click)="handleTopLeftToast()">Top Left Toast</button>
+      <button class='button-show-doc' (click)="handleTopCenterToast()">Top Center Toast</button>
+      <button class='button-show-doc' (click)="handleTopRightToast()">Top Right Toast</button>
+      <button class='button-show-doc' (click)="handleBottomLeftToast()">Bottom Left Toast</button>
+      <button class='button-show-doc' (click)="handleBottomCenterToast()">Bottom Center Toast</button>
+      <button class='button-show-doc' (click)="handleBottomRightToast()">Bottom Right Toast</button>
+    </div>
+    <div class="code-container">
+      <div class="copy-clipboard" (click)="handleCopyClipboard(toastPosition)">
+        <i class="bx bx-copy"></i>
+      </div>
+      <pre><code [highlightAuto]="toastPosition" lineNumbers></code></pre>
+    </div>
+  } @else {
+    <div class='tab configuration'>
+      <p class='subtitle-text'>Toast's Attributes</p>
+      <section>
+        <p class='doc-title attribute'>title</p>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Description:</p>
+          <p class='attribute-value'>Set the title of the toast.</p>
+        </div>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Values:</p>
+          <p class='attribute-value emphasis'>String</p>
+        </div>
+      </section>
+      <section>
+        <p class='doc-title attribute'>description</p>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Description:</p>
+          <p class='attribute-value'>Set the description of the toast.</p>
+        </div>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Values:</p>
+          <p class='attribute-value emphasis'>String | Component | &#123; component: Component; inputs: &#123; &#125; &#125;; </p>
+        </div>
+      </section>
+      <section>
+        <p class='doc-title attribute'>position</p>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Description:</p>
+          <p class='attribute-value'>Define the position of the toast (optional).</p>
+        </div>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Default:</p>
+          <p class='attribute-value emphasis'>top-right</p>
+        </div>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Values:</p>
+          <p class='attribute-value emphasis'>top-left | top-center | top-right | bottom-left | bottom-center | bottom-right</p>
+        </div>
+      </section>
+      <section>
+        <p class='doc-title attribute'>duration</p>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Description:</p>
+          <p class='attribute-value'>Define the duration of the toast (optional).</p>
+        </div>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Default:</p>
+          <p class='attribute-value emphasis'>3000ms</p>
+        </div>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Values:</p>
+          <p class='attribute-value emphasis'>Number</p>
+        </div>
+      </section>
+      <section>
+        <p class='doc-title attribute'>icon</p>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Description:</p>
+          <p class='attribute-value'>Define the personalize icon of the toast (optional).</p>
+        </div>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Default:</p>
+          <p class='attribute-value emphasis'>Depends of the type of toast</p>
+        </div>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Values:</p>
+          <p class='attribute-value emphasis'>String | Component</p>
+        </div>
+      </section>
+
+      <section>
+        <p class='doc-title attribute'>styles</p>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Description:</p>
+          <p class='attribute-value'>Define the personalize style of the toast (optional).</p>
+        </div>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Values:</p>
+          <p class='attribute-value emphasis'>&#123; title: String; description: String, badge: String, button: String &#125;</p>
+        </div>
+      </section>
+      <section>
+        <p class='doc-title attribute'>fill</p>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Description:</p>
+          <p class='attribute-value'>Define the fill style of the toast with the hexadecimal color (optional).</p>
+        </div>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Values:</p>
+          <p class='attribute-value emphasis'>String</p>
+        </div>
+      </section>
+      <section>
+        <p class='doc-title attribute'>button</p>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Description:</p>
+          <p class='attribute-value'>Define the button and function (optional).</p>
+        </div>
+        <div class='attribute-container'>
+          <p class='attribute-label'>Values:</p>
+          <p class='attribute-value emphasis'>&#123; title: string; onClick: () => &#123; &#125;; &#125;</p>
+        </div>
+      </section>
+    </div>
+  }
+  <footer class='footer-docs'>
+    <p>The MIT License 2023 makki-toast</p>
+    <p>Built by <a target='_blank' href='https://github.com/DanielJimenezC'>Daniel Jimenez</a></p>
+  </footer>
+</div>
